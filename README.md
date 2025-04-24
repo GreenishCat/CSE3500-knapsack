@@ -4,9 +4,9 @@ This repository contains four different Python implementations of algorithms use
 ## Implemented Algorithms
 
 ### 0/1 Knapsack
-- [`dp_01.py`](./dp_01.py) – Dynamic Programming (Bottom-Up)
-- [`mitm_01.py`](./mitm_01.py) – Meet-in-the-Middle (MITM) Strategy
+- [`dp_01.py`](./0-1_knapsack/dp_01.py) – Dynamic Programming (Bottom-Up)
+- [`mitm_01.py`](./0-1_knapsack/mitm_01.py) – Meet-in-the-Middle (MITM) Strategy
 
 ### Unbounded Knapsack
-- [`greedy_unbounded.py`](./greedy_unbounded.py) – Greedy Heuristic Method
-- [`dominance_unbounded.py`](./dominance_unbounded.py) – Dominance Relations with Pruning
+- [`greedy_unbounded.py`](./unbounded_knapsack/greedy_unbounded.py) – Greedy Heuristic Method
+- [`dominance_unbounded.py`](./unbounded_knapsack/dominance_unbounded.py) – Dominance Relations with Pruning
