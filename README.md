@@ -1,2 +1,12 @@
-# CSE3500-knapsack
-Four different approaches to two different variations of the classic knapsack problem. For CSE 3500's semester project.
+# Knapsack Problem
+This repository contains four different Python implementations of algorithms used to solve different variations of the Knapsack Problem, an optimization problem. Each file corresponds to an approach applied to either the 0/1 Knapsack or the Unbounded Knapsack variation.
+
+## Implemented Algorithms
+
+### 0/1 Knapsack
+- [`dp_01.py`](./dp_01.py) – Dynamic Programming (Bottom-Up)
+- [`mitm_01.py`](./mitm_01.py) – Meet-in-the-Middle (MITM) Strategy
+
+### Unbounded Knapsack
+- [`greedy_unbounded.py`](./greedy_unbounded.py) – Greedy Heuristic Method
+- [`dominance_unbounded.py`](./dominance_unbounded.py) – Dominance Relations with Pruning
