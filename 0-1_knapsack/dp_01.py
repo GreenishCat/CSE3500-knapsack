@@ -12,7 +12,7 @@ def knapsack(W, weight, profit):
     # stores the maximum value we can get using i items such that the knapsack capacity is j
     dp = [[0 for _ in range(W+1)] for _ in range(n+1)]
 
-    # Build table dp[][] in bottom-up manner
+    # Build table dp[i][j] using bottom-up tabulation 
     for i in range(n+1):
         for j in range(W+1):
 
