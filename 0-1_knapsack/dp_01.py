@@ -1,6 +1,6 @@
 # Alice Chen
 
-def knapsack(W, weight, profit):
+def knapsack(W, weight, value):
     """
     W = maximum weight capacity 
     weight = list of item weights
@@ -24,7 +24,7 @@ def knapsack(W, weight, profit):
 
                 # pick ith item if it does not exceed the capacity of knapsack
                 if weight[i-1] <= j: 
-                    pick = profit[i - 1] + dp[i - 1][j - weight[i - 1]]
+                    pick = value[i - 1] + dp[i - 1][j - weight[i - 1]]
 
                 # don't pick
                 notPick = dp[i - 1][j]
