@@ -17,7 +17,7 @@ def dominant_dp(items, capacity):
         new_solutions = []
         #Generate new solutions by adding this item to each existing solution
         for v, w in dominant_set:
-            if w + weight <= capacity:
+            while w + weight <= capacity:
                 new_solutions.append((v + value, w + weight))
         #Merge old and new solutions
         candidate_solutions = dominant_set + new_solutions
