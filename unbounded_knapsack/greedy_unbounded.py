@@ -1,11 +1,11 @@
 # Ananya Sripathi
 
-def knapsack_greedy(items, capacity):
+def knapsack_greedy(capacity, items):
   #sort the items in the profit to weight ratio, from highest to lowest
-  items.sort(key=lambda item: item[0] / item[1], reverse=True)
+  items.sort(key=lambda item: item[1] / item[0], reverse=True)
   total_profit = 0.0
   #checks each item's profit and weight in a loop
-  for profit, weight in items:
+  for weight, profit in items:
     #if we can take it fully, then keep adding it to the knapsack
     while capacity >= weight:
       total_profit += profit
