@@ -1,24 +1,24 @@
 # Saanvi Mammai
 import time 
 
-def dominant_dp(items, capacity):
+def dominant_dp(capacity, items):
     """
-    items: list of tuples (value, weight)
+    items: list of tuples (weight, value)
     capacity: max weight capacity of knapsack
     """
-    from time import time
-    start_time = time()
 
     #Initialize dominant set with single solution: value=0, weight=0
     dominant_set = [(0, 0)]  # list of (value, weight)
 
     #Iterate over each item
-    for value, weight in items:
+    for weight, value in items:
         new_solutions = []
         #Generate new solutions by adding this item to each existing solution
         for v, w in dominant_set:
             while w + weight <= capacity:
-                new_solutions.append((v + value, w + weight))
+                v += value
+                w += weight
+                new_solutions.append((v, w)) # changed order of value and weight
         #Merge old and new solutions
         candidate_solutions = dominant_set + new_solutions
         #Sort candidate solutions by weight
@@ -35,7 +35,4 @@ def dominant_dp(items, capacity):
 
         dominant_set = new_dominant_set  # Update dominant set
 
-    end_time = time()
-    print(f"Execution Time: {end_time - start_time:.6f} seconds")
-
-    return dominant_set
+    return max(val for val, _ in dominant_set)
