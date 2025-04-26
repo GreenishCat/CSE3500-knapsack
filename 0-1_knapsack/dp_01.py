@@ -1,12 +1,16 @@
 # Alice Chen
 
-def knapsack(W, weight, value):
+def knapsack(W, items):
     """
     W = maximum weight capacity 
+    items = list of tuples (weights, profits)
     weight = list of item weights
-    profit = list of item profits/values
+    value = list of item profits/values
     """
-    n = len(weight) # number of items 
+    weight = [w for w, _ in items]
+    value = [v for _, v in items]
+
+    n = len(items) # number of items 
     
     # initializing 2D DP table (W+1 * n+1) with 0s
     # stores the maximum value we can get using i items such that the knapsack capacity is w
